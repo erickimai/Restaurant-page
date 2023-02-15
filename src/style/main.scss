@@ -1,0 +1,274 @@
+/* Variables */
+$primary-color: black;
+$secondary-color: #ffdab9;
+$font-family: "Open Sans", sans-serif;
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+}
+
+body {
+  background-color: $primary-color;
+  color: #333;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+header {
+  background-color: $primary-color;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+li {
+  margin: 0 1rem;
+}
+
+button {
+  background-color: transparent;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #fff;
+  color: $primary-color;
+}
+
+main {
+  max-width: 1200px;
+  height: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: normal;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero, #about, #menu, #reservations, #contact {
+  background-image: url("../imgs/41-419298_background-image-for-restaurant-website.jpg");
+  background-size: cover;
+  height: 70vh;
+  color: #fff;
+  text-align: center;
+  padding: 5rem 0;
+}
+
+#about {
+  padding: 10rem;
+}
+
+#menu {
+  background-color: #fff;
+  padding: 2rem;
+}
+
+#menu ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#menu li {
+  width: 100%;
+}
+
+#menu h3 {
+  margin-top: 2rem;
+  color: $primary-color;
+}
+
+#reservations {
+  background-color: $secondary-color;
+  padding: 2rem;
+}
+
+
+form {
+    padding: 4rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+input {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+button[type="submit"] {
+  background-color: $primary-color;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: darken($primary-color, 10%);
+}
+
+footer {
+  background-color: black;
+  color: #fff;
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-info {
+  display: flex;
+  align-items: center;
+}
+
+.footer-info img {
+  height: 50px;
+  margin-right: 1rem;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icons li {
+  margin-right: 1rem;
+}
+
+.social-icons a {
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px);
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  ul {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  li {
+    margin: 0 0.5rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  #hero {
+    padding: 2rem 0;
+  }
+
+  #hero h1 {
+    font-size: 2rem;
+  }
+
+  #about {
+    padding: 1rem;
+  }
+
+  #menu {
+    padding: 1rem;
+  }
+
+  #menu li {
+    width: 50%;
+  }
+
+  #reservations {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  #hero h1 {
+    font-size: 1.5rem;
+  }
+}
