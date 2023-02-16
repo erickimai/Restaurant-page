@@ -8,14 +8,10 @@ export default function reservationsPage() {
   const emailLabel = document.createElement("label");
   const phoneLabel = document.createElement("label");
   const dateLabel = document.createElement("label");
-  const timeLabel = document.createElement("label");
-  const guestsLabel = document.createElement("label");
   const nameInput = document.createElement("input");
   const emailInput = document.createElement("input");
   const phoneInput = document.createElement("input");
   const dateInput = document.createElement("input");
-  const timeInput = document.createElement("input");
-  const guestsInput = document.createElement("input");
   const submit = document.createElement("button");
 
   section.id = "reservations";
@@ -31,12 +27,19 @@ export default function reservationsPage() {
   phoneInput.setAttribute("type", "tel");
   phoneInput.setAttribute("name", "phone");
   phoneInput.id = "phone";
+  dateLabel.setAttribute("for", "date");
+  dateInput.setAttribute("type", "date");
+  dateInput.setAttribute("name", "date");
+  dateInput.id = "date";
+  submit.setAttribute("type", "submit");
 
   h2.textContent = "Reservations";
   p.textContent = "Make a reservation to enjoy our dishes and service.";
   nameLabel.textContent = "Name:";
   emailLabel.textContent = "Email:";
   phoneLabel.textContent = "Phone:";
+  dateLabel.textContent = "Date:";
+  submit.textContent = "Make Reservation";
 
   main.append(section);
   section.append(h2);
@@ -48,4 +51,7 @@ export default function reservationsPage() {
   emailLabel.append(emailInput);
   form.append(phoneLabel);
   phoneLabel.append(phoneInput);
+  form.append(dateLabel);
+  dateLabel.append(dateInput);
+  form.append(submit);
 }
